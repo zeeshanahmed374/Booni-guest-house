@@ -114,3 +114,25 @@ if (reviewsSlider) {
         reviewsSlider.style.animationPlayState = 'running';
     });
 }
+// ===== BOOK NOW FIXED =====
+document.getElementById("bookNow")?.addEventListener("click", function () {
+  // Smooth scroll to booking form section
+  const bookingSection = document.querySelector("#booking");
+  if (bookingSection) {
+    bookingSection.scrollIntoView({ behavior: "smooth" });
+
+    // Wait a bit for mobile rendering
+    setTimeout(() => {
+      // Reset the form properly
+      const form = bookingSection.querySelector("form");
+      if (form) form.reset();
+
+      // Keep the first room type selected so mobile browsers don’t blank it
+      const select = form.querySelector("select[name='roomType']");
+      if (select && select.options.length > 0) {
+        select.selectedIndex = 0;
+      }
+    }, 300);
+  }
+});
+
