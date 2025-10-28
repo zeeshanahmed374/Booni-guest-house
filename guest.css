@@ -1,0 +1,719 @@
+/* ---------- BASIC RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background-color: #1e3d59;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffb400;
+}
+
+.btn {
+    background: #ffb400;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffcd4a;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    background: url("images/hero.jpg") center/cover no-repeat;
+    color: #fff;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #1e3d59;
+    margin-bottom: 1rem;
+}
+
+/* ---------- FEATURES ---------- */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.feature {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------- ROOMS ---------- */
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.room-card h3 {
+    padding: 0.5rem 1rem;
+}
+
+.room-card p {
+    padding: 0 1rem 0.5rem;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- SERVICES ---------- */
+.services ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.services li {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- ABOUT ---------- */
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* ---------- CONTACT ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* ---------- MAP ---------- */
+.map iframe {
+    border-radius: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #1e3d59;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 320px;
+    position: relative;
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features-container,
+    .room-list,
+    .gallery-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: url('guest.webp') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay for better text visibility */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #ffc107;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffb300;
+}
+
+/* ===== REVIEWS SECTION ===== */
+.reviews {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.reviews-slider {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: slideReviews 30s linear infinite;
+}
+
+.review-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.review-card p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #222;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Animation keyframes for sliding effect */
+@keyframes slideReviews {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .reviews-slider {
+        animation: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ===== BOOKING MODAL STYLING ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.3);
+    outline: none;
+}
+
+.modal-content .btn {
+    width: 100%;
+    background: #ffcc00;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modal-content .btn:hover {
+    background: #ffdb4d;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ROOMS SECTION (Responsive Grid) ===== */
+.rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.room-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.room-info p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.room-features {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.room-features li {
+    list-style: none;
+    margin-bottom: 0.4rem;
+}
+
+.room-card .btn {
+    margin-top: 1rem;
+    align-self: flex-start;
+    background: #e6b800;
+    color: #000;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.room-card .btn:hover {
+    background: #ffd633;
+    transform: translateY(-2px);
+}
+
+.price {
+    font-weight: 600;
+    color: #d4a017;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.logo img {
+    height: 45px;
+    /* smaller size */
+    width: 45px;
+    /* keep it square */
+    border-radius: 50%;
+    /* makes it round */
+    object-fit: cover;
+    /* ensures it fills the circle nicely */
+    border: 2px solid #fff;
+    /* optional white border for clean look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* soft shadow */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Fix header height and logo size */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 40px;
+    /* reduce top-bottom space */
+    height: 60px;
+    /* or your current color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Smaller, round logo */
+.logo img {
+    height: 38px;
+    /* smaller logo */
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Keep nav links centered properly */
+nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ===== MODAL STYLING ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.modal-content .btn {
+    width: 100%;
+    background: #2b7a78;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-content .btn:hover {
+    background: #205d5a;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close:hover {
+    color: #000;
+}

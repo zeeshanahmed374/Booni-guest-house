@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mountain View Guest House</title>
+    <link rel="stylesheet" href="guest.css">
+    <script src="guest.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="guesthouselogo.jpg" alt="Guest House Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xzzkekgy" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button class="btn" type="submit">Send</button>
+        </form>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.273132397993!2d72.25748109999999!3d36.2790647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38c341a1de4e0ff9%3A0x82100b3274bc6c9b!2sGILES%20WALEY%20GUEST%20HOUSE%20BOONI%20Upper%20Chitral!5e1!3m2!1sen!2s!4v1761661602193!5m2!1sen!2s"
+                width="100%" height="250"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mountain View Guest House | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
