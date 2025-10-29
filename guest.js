@@ -105,15 +105,7 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 
-const reviewsSlider = document.querySelector('.reviews-slider');
-if (reviewsSlider) {
-    reviewsSlider.addEventListener('mouseenter', () => {
-        reviewsSlider.style.animationPlayState = 'paused';
-    });
-    reviewsSlider.addEventListener('mouseleave', () => {
-        reviewsSlider.style.animationPlayState = 'running';
-    });
-}
+
 // ===== BOOK NOW FIXED =====
 document.getElementById("bookNow")?.addEventListener("click", function () {
   // Smooth scroll to booking form section
@@ -135,4 +127,5 @@ document.getElementById("bookNow")?.addEventListener("click", function () {
     }, 300);
   }
 });
+
 
